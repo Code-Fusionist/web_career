@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/web_career.git/static/css/main.0f9b38e4.css",
+    "main.js": "/web_career.git/static/js/main.aa7ae2de.js",
+    "index.html": "/web_career.git/index.html",
+    "main.0f9b38e4.css.map": "/web_career.git/static/css/main.0f9b38e4.css.map",
+    "main.aa7ae2de.js.map": "/web_career.git/static/js/main.aa7ae2de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f9b38e4.css",
+    "static/js/main.aa7ae2de.js"
+  ]
+}
