@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { gsap } from 'gsap';
 
 const Navbar = () => {
@@ -9,20 +9,17 @@ const Navbar = () => {
     if (!menuOpen) {
       gsap.fromTo(
         '.menu',
-        { x: '100%', opacity: 0 },
+        { x: '-100%', opacity: 0 },
         { x: '0%', opacity: 1, duration: 0.5 }
       );
     } else {
-      gsap.to('.menu', { x: '100%', opacity: 0, duration: 0.5 });
+      gsap.to('.menu', { x: '-100%', opacity: 0, duration: 0.5 });
     }
   };
 
   return (
     <nav className="flex items-center justify-between p-4 bg-gray-800 text-white">
       {/* Logo */}
-      <div className="logo text-xl font-bold">
-        <span className="text-blue-500">YourLogo</span>
-      </div>
 
       {/* Hamburger Menu Icon */}
       <div className="md:hidden" onClick={toggleMenu}>
@@ -37,6 +34,10 @@ const Navbar = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
+      </div>
+
+      <div className="logo text-xl font-bold">
+        <span className="text-blue-500">YourLogo</span>
       </div>
 
       {/* Navigation Links */}
@@ -64,9 +65,9 @@ const Navbar = () => {
 
       {/* Sliding Menu */}
       <div
-        className={`menu fixed top-0 right-0 w-64 h-full bg-gray-800 text-white p-4 transform ${
-          menuOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-500 z-10`}
+        className={`menu fixed left-0 top-0 w-64 h-full bg-gray-800 text-white p-4 transform ${
+          menuOpen ? 'translate-x-0' : '-translate-x-full'
+        } transition-transform duration-100 z-10`}
       >
         <button onClick={toggleMenu} className="mb-4">
           <svg
