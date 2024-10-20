@@ -1,5 +1,7 @@
-import { useState } from 'react';
-import { gsap } from 'gsap';
+import { useState } from "react";
+import { gsap } from "gsap";
+import { SlMenu } from "react-icons/sl";
+import { RiCloseCircleFill } from "react-icons/ri";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,12 +10,12 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
     if (!menuOpen) {
       gsap.fromTo(
-        '.menu',
-        { x: '-100%', opacity: 0 },
-        { x: '0%', opacity: 1, duration: 0.5 }
+        ".menu",
+        { x: "-100%", opacity: 0 },
+        { x: "0%", opacity: 1, duration: 0.5 }
       );
     } else {
-      gsap.to('.menu', { x: '-100%', opacity: 0, duration: 0.5 });
+      gsap.to(".menu", { x: "-100%", opacity: 0, duration: 0.5 });
     }
   };
 
@@ -23,17 +25,7 @@ const Navbar = () => {
 
       {/* Hamburger Menu Icon */}
       <div className="md:hidden" onClick={toggleMenu}>
-        <button className="focus:outline-none">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
+        <SlMenu />
       </div>
 
       <div className="logo text-xl font-bold">
@@ -66,21 +58,19 @@ const Navbar = () => {
       {/* Sliding Menu */}
       <div
         className={`menu fixed left-0 top-0 w-64 h-full bg-gray-800 text-white p-4 transform ${
-          menuOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-100 z-10`}
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-100 z-10 space-y-10`}
       >
-        <button onClick={toggleMenu} className="mb-4">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <a href="#college-prediction" className="block mb-2 hover:text-blue-400">
+        <div className="absolute position-relative">
+          <button onClick={toggleMenu} className="mb-4 ml-56">
+            <RiCloseCircleFill className="size-6" />
+          </button>
+        </div>
+      <div className="" id="contents">
+      <a
+          href="#college-prediction"
+          className="block mb-2 hover:text-blue-400"
+        >
           College Prediction
         </a>
         <a href="#students" className="block mb-2 hover:text-blue-400">
@@ -97,6 +87,7 @@ const Navbar = () => {
             Log In
           </button>
         </div>
+      </div>
       </div>
     </nav>
   );
