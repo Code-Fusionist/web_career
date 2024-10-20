@@ -66,7 +66,7 @@ const Navbar = () => {
       <div
         className={`menu fixed top-0 right-0 w-64 h-full bg-gray-800 text-white p-4 transform ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-500`}
+        } transition-transform duration-500 z-10`}
       >
         <button onClick={toggleMenu} className="mb-4">
           <svg
