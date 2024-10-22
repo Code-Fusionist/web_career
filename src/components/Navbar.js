@@ -2,6 +2,7 @@ import { useState } from "react";
 import { gsap } from "gsap";
 import { SlMenu } from "react-icons/sl";
 import { RiCloseCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,9 +35,9 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className="hidden md:flex space-x-4">
-        <a href="#college-prediction" className="nav-item hover:text-blue-400">
+        <Link to="\Prediction" className="nav-item hover:text-blue-400">
           College Prediction
-        </a>
+        </Link>
         <a href="#students" className="nav-item hover:text-blue-400">
           Students
         </a>
