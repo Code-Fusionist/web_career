@@ -35,7 +35,7 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className="hidden md:flex space-x-4">
-        <Link to="\Prediction" className="nav-item hover:text-blue-400">
+        <Link to="/pred" className="nav-item hover:text-blue-400">
           College Prediction
         </Link>
         <a href="#students" className="nav-item hover:text-blue-400">
@@ -69,7 +69,7 @@ const Navbar = () => {
         </div>
       <div className="" id="contents">
       <Link
-          to="/Prediction"
+          to="/pred"
           className="block mb-2 hover:text-blue-400"
         >
           College Prediction
