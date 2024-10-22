@@ -9,6 +9,7 @@ return(
      <div>
      <Routes>
         <Route exact path="/" index element={<Home/>}></Route>
+        <Route path="login" index element={<Home/>}></Route>
       </Routes>
      </div>
     </BrowserRouter>
