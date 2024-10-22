@@ -68,12 +68,12 @@ const Navbar = () => {
           </button>
         </div>
       <div className="" id="contents">
-      <a
-          href="#college-prediction"
+      <Link
+          to="/Prediction"
           className="block mb-2 hover:text-blue-400"
         >
           College Prediction
-        </a>
+        </Link>
         <a href="#students" className="block mb-2 hover:text-blue-400">
           Students
         </a>
