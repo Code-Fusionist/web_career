@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Screen/Home";
 
 export default function Routess() {
 return(
@@ -8,7 +9,6 @@ return(
      <div>
      <Routes>
         <Route exact path="/" index element={<Home/>}></Route>
-        <Route exact path="/login" element={<Login/>}></Route>
       </Routes>
      </div>
     </BrowserRouter>
