@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./screen/Home"
 import Pred from "./screen/Prediction";
+import Pred from "./screen/Prediction";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Routes>
         <Route index element={<Home/>}></Route>
         <Route path="/pred" element={<Prediction/>}></Route>
+        <Route path="/login-signup" element={<Prediction/>}></Route>
       </Routes>
     </BrowserRouter>
   );
