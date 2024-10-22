@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./screen/Home"
 import Pred from "./screen/Prediction";
-import Pred from "./screen/Prediction";
+import SignupForm from "./components/SignupForm";
 
 export default function App() {
   return (
